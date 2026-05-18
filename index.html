@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ScheduleBot — Smart WhatsApp Scheduling</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="logo" href="#" onclick="showPage('home')">
+    <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.121 1.529 5.855L.057 23.448a.5.5 0 0 0 .611.611l5.593-1.472A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.894a9.894 9.894 0 0 1-5.035-1.372l-.36-.214-3.742.984.984-3.742-.214-.36A9.894 9.894 0 0 1 2.106 12C2.106 6.534 6.534 2.106 12 2.106S21.894 6.534 21.894 12 17.466 21.894 12 21.894z"/>
+    </svg>
+    ScheduleBot
+  </a>
+  <ul class="nav-tabs">
+    <li><button class="active" onclick="showPage('home')">Home</button></li>
+    <li><button onclick="showPage('pricing')">Pricing</button></li>
+    <li><button onclick="showPage('whatsapp')">Get Started</button></li>
+  </ul>
+</nav>
+
+<!-- HOME PAGE -->
+<div id="page-home" class="page active">
+  <section class="hero">
+    <div class="badge">
+      <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg>
+      WhatsApp-Powered
+    </div>
+    <h1>Schedule anything with a <span>simple message</span></h1>
+    <p>Send a text, voice note, or photo — ScheduleBot understands you and books your event instantly. No apps, no forms, no friction.</p>
+    <div class="hero-cta">
+      <button class="btn btn-primary" onclick="showPage('whatsapp')">
+        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.121 1.529 5.855L.057 23.448a.5.5 0 0 0 .611.611l5.593-1.472A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.894a9.894 9.894 0 0 1-5.035-1.372l-.36-.214-3.742.984.984-3.742-.214-.36A9.894 9.894 0 0 1 2.106 12C2.106 6.534 6.534 2.106 12 2.106S21.894 6.534 21.894 12 17.466 21.894 12 21.894z"/></svg>
+        Try it on WhatsApp
+      </button>
+      <button class="btn btn-outline" onclick="showPage('pricing')">View Pricing</button>
+    </div>
+  </section>
+
+  <section class="features">
+    <p class="section-label">Features</p>
+    <h2 class="section-title">Three ways to schedule</h2>
+    <div class="cards">
+      <div class="card">
+        <div class="card-icon">💬</div>
+        <h3>Text Message</h3>
+        <p>Just type naturally. "Schedule a meeting with John tomorrow at 3pm" — and it's done. No special syntax needed.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🎙️</div>
+        <h3>Voice Note</h3>
+        <p>Talk to ScheduleBot like you'd talk to an assistant. Send a voice note and it transcribes, understands, and books instantly.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🖼️</div>
+        <h3>Image</h3>
+        <p>Snap a photo of a flyer, invite, or calendar screenshot. The bot reads the details and schedules the event for you.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="how">
+    <div class="how-inner">
+      <p class="section-label">How it works</p>
+      <h2 class="section-title">From message to calendar in seconds</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h4>Open WhatsApp</h4>
+          <p>Start a chat with your ScheduleBot number — no downloads, no accounts.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h4>Send your request</h4>
+          <p>Text, voice note, or photo — describe the event however feels natural.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <h4>Confirm details</h4>
+          <p>The bot replies with a summary. Confirm or tweak anything in plain language.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <h4>It's scheduled!</h4>
+          <p>Your event lands on your calendar and you get a reminder when it's time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>&copy; 2026 ScheduleBot — Smart WhatsApp Scheduling</footer>
+</div>
+
+<!-- PRICING PAGE -->
+<div id="page-pricing" class="page">
+  <div class="pricing-page">
+    <p class="section-label">Pricing</p>
+    <h2 class="section-title">Simple, honest plans</h2>
+
+    <div class="pricing-grid">
+      <div class="plan">
+        <p class="plan-name">Free</p>
+        <div class="plan-price">$0 <span>/ month</span></div>
+        <p class="plan-desc">Perfect for trying it out</p>
+        <ul class="plan-features">
+          <li>10 events per month</li>
+          <li>Text scheduling</li>
+          <li>Basic calendar integration</li>
+          <li class="no">Voice note scheduling</li>
+          <li class="no">Image scheduling</li>
+          <li class="no">Recurring events</li>
+          <li class="no">Priority support</li>
+        </ul>
+        <button class="btn btn-outline" onclick="showPage('whatsapp')">Get Started Free</button>
+      </div>
+
+      <div class="plan popular">
+        <div class="popular-badge">Most Popular</div>
+        <p class="plan-name">Pro</p>
+        <div class="plan-price">$9 <span>/ month</span></div>
+        <p class="plan-desc">For individuals who schedule often</p>
+        <ul class="plan-features">
+          <li>Unlimited events</li>
+          <li>Text scheduling</li>
+          <li>Voice note scheduling</li>
+          <li>Image scheduling</li>
+          <li>Recurring events</li>
+          <li>Google &amp; Outlook sync</li>
+          <li class="no">Priority support</li>
+        </ul>
+        <button class="btn btn-primary" onclick="showPage('whatsapp')">Start Free Trial</button>
+      </div>
+
+      <div class="plan">
+        <p class="plan-name">Business</p>
+        <div class="plan-price">$29 <span>/ month</span></div>
+        <p class="plan-desc">For teams and power users</p>
+        <ul class="plan-features">
+          <li>Everything in Pro</li>
+          <li>Up to 10 team members</li>
+          <li>Shared calendars</li>
+          <li>Meeting room booking</li>
+          <li>Custom reminders</li>
+          <li>Analytics dashboard</li>
+          <li>Priority support</li>
+        </ul>
+        <button class="btn btn-outline" onclick="showPage('whatsapp')">Contact Sales</button>
+      </div>
+    </div>
+  </div>
+  <footer>&copy; 2026 ScheduleBot — Smart WhatsApp Scheduling</footer>
+</div>
+
+<!-- WHATSAPP PAGE -->
+<div id="page-whatsapp" class="page">
+  <div class="wa-page">
+    <div class="wa-icon">
+      <svg width="56" height="56" fill="#0f1117" viewBox="0 0 24 24">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+        <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.121 1.529 5.855L.057 23.448a.5.5 0 0 0 .611.611l5.593-1.472A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.894a9.894 9.894 0 0 1-5.035-1.372l-.36-.214-3.742.984.984-3.742-.214-.36A9.894 9.894 0 0 1 2.106 12C2.106 6.534 6.534 2.106 12 2.106S21.894 6.534 21.894 12 17.466 21.894 12 21.894z"/>
+      </svg>
+    </div>
+    <h2>Start scheduling on WhatsApp</h2>
+    <p>Click the button below to open a chat with ScheduleBot. Send any message to get started — text, voice note, or image.</p>
+    <!-- Replace YOUR_PHONE_NUMBER with your number in international format, no + or spaces (e.g. 5511999999999) -->
+    <a class="wa-btn" href="https://wa.me/YOUR_PHONE_NUMBER?text=Hi%2C%20I%27d%20like%20to%20schedule%20an%20event!" target="_blank" rel="noopener">
+      <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+        <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.121 1.529 5.855L.057 23.448a.5.5 0 0 0 .611.611l5.593-1.472A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.894a9.894 9.894 0 0 1-5.035-1.372l-.36-.214-3.742.984.984-3.742-.214-.36A9.894 9.894 0 0 1 2.106 12C2.106 6.534 6.534 2.106 12 2.106S21.894 6.534 21.894 12 17.466 21.894 12 21.894z"/>
+      </svg>
+      Open WhatsApp Chat
+    </a>
+    <p class="wa-note">Opens WhatsApp on mobile or WhatsApp Web on desktop</p>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
